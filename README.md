@@ -18,7 +18,6 @@
 **CSE Student · AI/ML Engineer · GFG Technical Co-Lead**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-jayavardhan--valle-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/jayavardhan-valle)
-[![Instagram](https://img.shields.io/badge/Instagram-jayavardhan__valle-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/jayavardhan_valle)
 
 <br>
 
