@@ -61,7 +61,18 @@ if SHARPEN:
     im = im.filter(ImageFilter.UnsharpMask(radius=2, percent=140, threshold=2))
 im = ImageEnhance.Brightness(im).enhance(BRIGHTNESS)
 im = ImageEnhance.Contrast(im).enhance(CONTRAST)
-im = im.resize((COLS, ROWS), Image.LANCZOS)
+
+# fit the whole image into the COLS x ROWS grid without cropping or distorting
+# it -- cells aren't square (CELL_W x CELL_H), so scale in real pixel units,
+# then letterbox (pad with white -> blank char) onto the grid, centered.
+img_w, img_h = im.size
+scale = min((COLS * CELL_W) / img_w, (ROWS * CELL_H) / img_h)
+new_w = max(1, round(img_w * scale / CELL_W))
+new_h = max(1, round(img_h * scale / CELL_H))
+resized = im.resize((new_w, new_h), Image.LANCZOS)
+canvas = Image.new("L", (COLS, ROWS), 255)  # white bg -> ramp's blank char
+canvas.paste(resized, ((COLS - new_w) // 2, (ROWS - new_h) // 2))
+im = canvas
 px = im.load()
 
 STATIC = bool(os.environ.get("STATIC"))  # emit frozen state for previews
