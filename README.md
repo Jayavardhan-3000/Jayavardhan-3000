@@ -15,7 +15,7 @@
 
 ## Jayavardhan
 
-**CSE Student · AI/ML Engineer · GFG Technical Co-Lead**
+**CSE Student · AI/ML Engineer · GFG Technical Lead**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-jayavardhan--valle-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/jayavardhan-valle)
 
